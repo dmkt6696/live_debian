@@ -53,6 +53,8 @@ if [ -f "live-image-amd64.hybrid.iso" ]; then
     # Перемещение ISO файла в родительскую директорию
     mv live-image-amd64.hybrid.iso ../$OUTPUT_ISO
     log "ISO файл создан: $OUTPUT_ISO"
+    cp /build/debian-live.iso /output/debian-live.iso
+    cp /build/debian-live-build/build.log /output/build.log
 else
     log "Ошибка при сборке live образа."
     exit 1
